@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Editor</title>
+   
+    <link rel="styleSheet" href="style.css">
+</head>
+<body>
+  <h1 class="heading">Text Editor</h1>
+    <div class="toolbar">
+        <button onclick="execCmd('bold')"><b>B</b></button>
+        <button onclick="execCmd('italic')"><i>I</i></button>
+        <button onclick="execCmd('underline')"><u>U</u></button>
+        <button onclick="execCmd('justifyCenter')">Center</button>
+        <button onclick="execCmd('justifyLeft')">Left</button>
+        <button onclick="execCmd('justifyRight')">Right</button>
+        <input type="color" onchange="execCmdWithArg('foreColor', this.value)">
+        <input type="color" onchange="execCmdWithArg('hiliteColor', this.value)">
+    </div>
+
+    <div id="editor" contenteditable="true"></div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
